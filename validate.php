@@ -24,11 +24,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (($user['username'] == $username) &&
             ($user['password'] == $password)
         ) {
-            header("location: administrator.php");
+            // header("location: administrator.php");
+            session_start();
+            echo "<script type = \"text/javascript\">
+									alert(\"Login Successful.................\");
+									window.location = (\"administrator.php\")
+									</script>";
         } else {
-            echo "<script language='javascript'>";
-            echo "alert('WRONG INFORMATION')";
-            echo "</script>";
+            echo "<script type = \"text/javascript\">
+									alert(\"Login Failed. Try Again................\");
+									window.location = (\"index.php\")
+									</script>";
             // header("location: index.php");
             die();
         }
