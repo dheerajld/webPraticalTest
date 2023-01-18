@@ -19,6 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
     $users = $stmt->fetchAll();
 
+    $id = $_SESSION['id'];
+
     foreach ($users as $user) {
 
         if (($user['username'] == $username) &&
