@@ -69,7 +69,7 @@
 								<td><h3><a href="#"><?php echo $row['product_name'] ?></a></h3></td>
 								<td><?php echo $row['product_description'] ?></td>
 								<td><a href="#"><?php echo $row['product_price'] ?></a></td>
-								<td><a href="javascript:sureToApprove(<?php echo $row['product_id'];?>)" class="ico del">Delete</a><a href="edit.php?upd=<?php echo $row['product_id']?>" class="ico edit">Edit</a></td>
+								<td><a href="javascript:sureToApprove(<?php echo $row['product_id'];?>)" class="ico del">Delete</a><a href="edit_products.php?upd=<?php echo $row['product_id']?>" class="ico edit">Edit</a></td>
 							</tr>
 							<?php
 								}
